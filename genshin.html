@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: auto;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 5;
+        padding: 8px 8px;
+      }
+
+      .search {
+        float: right;
+        line-height: 50px;
+        margin-right: 10px;
+        font-weight: bold;
+        border-radius: 5px 0px 0px 5px;
+      }
+
+      #submit {
+        position: relative;
+        left: -8px;
+        border: 2px solid #0c4a7c;
+        background-color: #0c4a7c;
+        color: #fafafa;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 0px 5px 5px 0px;
+      }
+
+      #submit:hover {
+        background: black;
+      }
+      .lg {
+        display: inline-block;
+        vertical-align: top;
+        width: 80px;
+        height: 50px;
+        margin-right: 30px;
+        margin-left: 40px;
+      }
+      .menu {
+        float: left;
+        vertical-align: top;
+        margin-top: 0;
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu ul li {
+        align-items: baseline;
+        display: inline-block;
+      }
+
+      .menu li a {
+        text-decoration: none;
+        color: #f1f1f1;
+        padding: 0 20px;
+        display: block;
+        line-height: 50px;
+        font-weight: bold;
+      }
+      .active {
+        color: #ffffff;
+      }
+      .menu li:hover {
+        background-color: #539ad8;
+      }
+
+      .menu li a:hover {
+        color: #ffffff;
+      }
+
+      .button:hover {
+        background-color: #539ad8;
+        border-radius: 10px;
+      }
+      h1 {
+        font-size: 2.5em;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .dropbtn {
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        background-color: none;
+        color: #f1f1f1;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .hm:hover {
+        background-color: #539ad8;
+        border-radius: 7px;
+      }
+      .dropdown-content a:hover {
+        background-color: #539ad8;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: none;
+      }
+      .banner-img {
+        background-image: url(./assets/genshin_02_4K.jpg);
+        /* filter: blur(1.3px); */
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100%;
+      }
+      .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 45%;
+        padding: 40px 0;
+        text-align: center;
+        border-top-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #ffffff;
+        font-weight: bold;
+        border: 10px inset #ffffff;
+      }
+      .banner-text p {
+        padding: 0 8px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .btn a {
+        display: inline-block;
+        padding: 10px 50px;
+        border: 2px solid #ffffff;
+        text-decoration: none;
+        color: #ffffff;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <!-- <div class="title">
+        <h1>Database Genshin Impact</h1>
+      </div> -->
+    <div class="search">
+    <form action="search_character.php" method="post">
+          <input type="text" name="search" placeholder="Search..." />
+          <input type="submit" id="submit" value="Search" />
+        </form>
+    </div>
+      <div class="menu">
+        <ul>
+          <img class="lg" src="./assets/logo_putih.png" alt="" />
+          <li><a href="genshin.html">Home</a></li>
+          <li>
+            <div class="dropdown">
+              <div class="dropbtn">Database</div>
+              <div class="dropdown-content">
+                <a href="list_character.php">Character</a>
+                <a href="list_monster.php">Monster</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="banner-img">
+      <div class="banner-text">
+        <h1>Genshin Impact</h1>
+        <p>
+          Genshin Impact is an action role-playing game developed and published by Chinese game house
+          miHoYo. It was released for Microsoft Windows, PlayStation 4, Android, and iOS.
+        </p>
+        <div class="btn"><a href="#" onClick="alert('Game telah didownload')">Download</a></div>
+      </div>
+    </div>
+  </body>
+</html>
