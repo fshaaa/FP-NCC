@@ -177,12 +177,6 @@
         margin-top: 0px;
         border: 1px solid rgba(255,255,255,0.3);
       }
-
-      .footer{
-        text-align: center;
-        color: white;
-        font-size: 12px;
-      }
     </style>
   </head>
   <body>
@@ -241,10 +235,5 @@
         mysqli_close($db_connection);
         ?>
       </table>
-      <div class="footer">
-        <hr>
-        <h7> © 2021 - Genshin Impact Database</h7><br>
-        <h7> LBE NCC 2021</h7>
-      </div>
   </body>
 </html>
